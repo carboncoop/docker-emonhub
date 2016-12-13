@@ -1,6 +1,6 @@
 # smx-cc-app
 
-Dockerfile description of Carbon Co-op SMX app.
+Dockerfile description of Carbon Co-op SMX 'satellite app'. Based on ARM hypriot alpine container image.  
 
 To build the app:
 
