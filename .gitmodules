@@ -1,0 +1,3 @@
+[submodule "emonhub"]
+	path = emonhub
+	url = https://github.com/beaylott/emonhub
