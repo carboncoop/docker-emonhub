@@ -1,11 +1,11 @@
 FROM hypriot/rpi-alpine
 
-RUN apk update
-RUN apk upgrade
-RUN apk add bash
-RUN apk add python
-RUN apk add py-setuptools
-RUN apk add ca-certificates && \
+RUN apk update && \
+apk upgrade && \
+apk add bash && \
+apk add python && \
+apk add py-setuptools && \
+apk add ca-certificates && \
 if [[ ! -e /usr/bin/python ]];        then ln -sf /usr/bin/python2.7 /usr/bin/python; fi && \
 if [[ ! -e /usr/bin/python-config ]]; then ln -sf /usr/bin/python2.7-config /usr/bin/python-config; fi && \
 if [[ ! -e /usr/bin/easy_install ]]; then ln -sf /usr/bin/easy_install-2.7 /usr/bin/easy_install; fi && \

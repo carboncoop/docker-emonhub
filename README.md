@@ -1,9 +1,21 @@
-# smx-cc-app
+# smx-emonhub [![Build Status](https://travis-ci.org/carboncoop/smx-emonhub.svg?branch=master)](https://travis-ci.org/carboncoop/smx-emonhub)
 
-Dockerfile description of Carbon Co-op SMX 'satellite app'. Based on ARM hypriot alpine container image.  
+emoncms connector for Nobel Grid Smart Meter Extension.
+Based on the hypriot alpine base image.
 
-To build the app:
+## What is SMX, Nobel Grid, emoncms, and smx-emonhub?
 
-``docker build -t [[/HUB:]/USER:]smx-cc-app ./``
+The Smart Meter Extension (SMX) is a concept hardware device developed
+as part of the Nobel Grid project, a Horizon 2020 programme for developing
+new and innovative solutions for community smart grids.
 
-``docker run -v $PWD/emonhub:/emonhub -it /emonhub/src/emonhub.py --config-file=/emonhub/conf/interfacer_examples/smx/smx.emonhub.conf``
+emoncms (https://emoncms.org) is an open source energy monitoring platform.
+
+smx-emonhub is a Docker-based application which runs on the SMX
+and forwards metering data to emoncms using the emonhub Python application.
+
+## Build Details
+- [Source Project Page](https://github.com/carboncoop)
+- [Source Repository](https://github.com/carboncoop/smx-emonhub)
+- [Dockerfile](https://github.com/carboncoop/smx-emonhub/blob/master/Dockerfile)
+- [DockerHub] (https://registry.hub.docker.com/u/carboncoop/smx-emonhub/)
