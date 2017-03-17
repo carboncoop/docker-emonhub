@@ -19,4 +19,5 @@ RUN mkdir /emonhub
 COPY emonhub /
 #VOLUME /emonhub
 
-ENTRYPOINT ["/emonhub/src/emonhub.py"]
+#ENTRYPOINT ["python","/emonhub/src/emonhub.py"]
+CMD ["ls","/emonhub"]
