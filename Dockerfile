@@ -16,7 +16,7 @@ pip install paho-mqtt pydispatcher ConfigObj pyserial pytz && \
 rm -rf /var/cache/apk/*
 
 RUN mkdir /emonhub
-#COPY emonhub /
-VOLUME /emonhub
+COPY emonhub /
+#VOLUME /emonhub
 
-CMD ["/bin/bash"]
+ENTRYPOINT ["/emonhub/src/emonhub.py"]
