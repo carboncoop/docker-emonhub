@@ -5,7 +5,7 @@ Based on the hypriot alpine base image.
 
 ## What is SMX, Nobel Grid, emoncms, and smx-emonhub?
 
-The Smart Meter Extension (SMX) is a concept hardware device developed
+The Smart Meter Extension (SMX) is a concept 'un-bundled' smart meter component developed
 as part of the [Nobel Grid](http://nobelgrid.eu/) project, a Horizon 2020 
 programme for developing new and innovative solutions for community smart grids.
 
@@ -22,4 +22,4 @@ Python application.
 
 ## Other Links
 - [Carbon Co-op Project Page](https://github.com/carboncoop)
-- [Carbon Co-op Website](https://carbon.cpp[)
+- [Carbon Co-op Website](https://carbon.coop)
