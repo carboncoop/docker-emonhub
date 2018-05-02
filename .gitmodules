@@ -1,3 +1,4 @@
 [submodule "emonhub"]
 	path = emonhub
 	url = https://github.com/carboncoop/emonhub.git
+	branch= kmp

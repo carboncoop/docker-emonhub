@@ -1,4 +1,4 @@
-FROM hypriot/rpi-alpine
+FROM arm32v6/alpine
 
 RUN apk update && \
 apk upgrade && \
@@ -15,18 +15,13 @@ apk add py-pip && \
 apk add ca-certificates 
 
 RUN mkdir emonhub
-COPY emonhub /
+COPY emonhub /emonhub
 RUN cd /emonhub
 WORKDIR /emonhub
 
-RUN yes | pip install --noinput -vvv --upgrade pip 
+RUN yes | pip install  -vvv --upgrade pip 
 RUN if [[ ! -e /usr/bin/pip ]]; then ln -sf /usr/bin/pip2.7 /usr/bin/pip; fi && \
-yes | pip install paho-mqtt pydispatcher ConfigObj pyserial pytz && \
+yes | pip install paho-mqtt pydispatcher ConfigObj pyserial pytz requests&& \
 rm -rf /var/cache/apk/*
 
-#RUN mkdir /emonhub
-#COPY emonhub /
-#VOLUME /emonhub
-
-#ENTRYPOINT ["python","/emonhub/src/emonhub.py"]
-CMD ["ls","/emonhub"]
+CMD ["python","/emonhub/src/emonhub.py","--config-file","/emonhub/emonhub.conf"]
